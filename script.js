@@ -38,3 +38,9 @@ if (!motionPreference.matches && 'IntersectionObserver' in window) {
   document.querySelectorAll('.section-heading h2,.principal h2,.contact h2').forEach(heading => {heading.classList.add('text-reveal');revealObserver.observe(heading);});
   motionPreference.addEventListener('change',()=>{if(motionPreference.matches)document.querySelectorAll('.text-reveal').forEach(el=>el.classList.add('is-visible'));});
 }
+const awardsToggle = document.querySelector('.awards-toggle');
+awardsToggle.addEventListener('click', () => {
+  const paused = document.querySelector('.awards').classList.toggle('awards-paused');
+  awardsToggle.setAttribute('aria-pressed', String(paused));
+  awardsToggle.textContent = paused ? 'Resume awards' : 'Pause awards';
+});

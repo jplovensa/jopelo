@@ -22,10 +22,20 @@ Fjall Group / Chief Business Officer comes from the user; SECHA and LingoTalk de
 
 ## Cinematic close-up hero
 
-The hero uses the 1024×1536 portrait at its original proportions, centered to the viewport. Explicit image widths/top offsets define desktop, tablet and mobile framing; the portrait is neither animated nor cover-scaled. Oversized JOPELO typography moves behind it with a pause control. The studio barcode remains in the supporting credit area and footer.
+The hero uses the 1024×1536 portrait at its original proportions, centered to the viewport, with the centered “Built to make a mark” headline immediately below the portrait frame. Explicit image widths/top offsets define desktop, tablet and mobile framing; the portrait is neither animated nor cover-scaled. Oversized JOPELO typography moves behind it with a pause control. The studio barcode remains in the supporting credit area and footer.
 
 The red THINK / BUILD / JOPELO opening is restored. It supports Skip, Escape, replay and reduced-motion bypass. It runs once per tab session; the replay control is always available. Text also reveals in section headings. The remaining page keeps the ivory/charcoal identity, capability-led inquiry and project title sequences.
 
 Fjall Group and SECHA remain portfolio projects. Their locally hosted title sequences, native controls and website links are retained. They are custom title treatments, not recordings of the websites. Forbes India and APAC Insider recognition names were supplied by the user; award titles and dates have not been independently verified.
 
 The inquiry prepares text for the visitor to send on LinkedIn; no submission backend is implied.
+
+## Recognition motion
+
+Forbes India and APAC Insider scroll in a continuous text track. The awards section has its own pause control; the global motion control also pauses it. Reduced-motion preference replaces the track with a static, nonduplicated layout.
+
+## Recording live project heroes
+
+`scripts/record-projects.py` uses Playwright Chromium and ffmpeg to record ten seconds of each real hero at 1440×900. It preserves proxy/TLS configuration, rejects unverified source/error pages, and writes new `assets/fjall-hero.mp4` and `assets/secha-hero.mp4` plus posters without overwriting the current title treatments. Inspect the footage before wiring those files into the project panels.
+
+The script is syntax-checked, but live recording is blocked: the runtime proxy refuses both project domains. Their www and root hostnames are already in the environment configuration draft but absent from the running policy. Apply the saved network configuration, then rerun capture and verify both videos before replacing the current title treatments.

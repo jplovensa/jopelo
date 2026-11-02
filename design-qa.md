@@ -125,3 +125,15 @@ Portrait treatment now uses the original 1024×1536 proportions rather than obje
 Chromium measurements at widths 390/768/1440/1920 verified portrait center within 0.5 CSS px of viewport center. Portrait bounding box unchanged over a one-second interval at every size. Background type transform changes while running and animationPlayState is paused after the motion control. Screenshots visually reviewed for headroom, chin/neck crop and side-text overlap; face remains unobscured. No actionable P0/P1/P2 findings.
 
 Existing regression checks pass: no overflow at 390/768/1440, mobile navigation, local project video playback, motion pause, capability selection and inquiry generation, preloader skip/replay/Escape, reduced-motion bypass and no video autoplay under reduced motion. No page errors or failed local responses. The red THINK / BUILD / JOPELO opening retains a 2.8-second limit and per-session storage with replay. Live deployment unverified.
+
+## Portrait over headline and recognition motion (current)
+
+final result: passed
+
+Implemented UI scope: centered portrait, headline directly underneath, scrolling recognition names. Live website capture is explicitly blocked and is not included in this passing UI result.
+
+Evidence inspected: `/tmp/streaming-hero.png` (1440×1000 centered portrait/heading), `/tmp/centered-headline-mobile.png` (390×1000 final portrait fade and copy), `/tmp/awards-motion.png` (desktop awards track, paused). Latest user instruction is the scoped visual target; previous full-hero composition was intentionally changed. A subtle lower portrait fade removes the hard shoulder cut while preserving face geometry. Typography, palette, barcode and content match the retained studio system.
+
+Measured at 390/768/1440/1920: portrait midpoint differs by less than 0.5px from viewport midpoint; headline block begins below the image frame at each size. Awards transform changes over time; local awards button sets animationPlayState to paused. Duplicated track is aria-hidden; reduced motion hides the duplicate and removes animation. Global pause also stops the track. Existing menu/video/inquiry and reduced-motion regressions passed with no browser errors or local asset failures. No unresolved P0/P1/P2 UI finding.
+
+Recording blocker: curl receives proxy CONNECT 403 for both sites; Chromium receives ERR_TUNNEL_CONNECTION_FAILED. Current runtime allowed hosts omit these sites although the saved draft includes them. No source capture or real website footage was produced; existing title treatments remain labelled. `scripts/record-projects.py` is prepared and syntax-checked only. After network settings apply, record real hero footage, inspect it and replace current title sequences in a separate validation pass.
