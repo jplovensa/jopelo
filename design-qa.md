@@ -53,3 +53,21 @@ Initial mobile review found the global image max-width prevented centering the w
 Chromium verified actual MP4 playback (three-second duration, advancing currentTime), skip, automatic completion, per-session suppression, portrait pause, reduced-motion bypass and no horizontal overflow on mobile. Repeated existing menu/service/inquiry tests: passed, zero browser errors. Final mobile crop and desktop screenshot opened and inspected. No outstanding P0/P1/P2 issue in this scoped revision.
 
 final result: passed
+
+## Cinematic studio revision (current)
+
+final result: passed
+
+Scope: the user requested a studio-led cinematic portfolio, brutalist preloader, still headshot and text-only motion. These changes intentionally supersede the earlier centered portrait composition and animated MP4 intro.
+
+Evidence opened: `/tmp/cinematic-desktop.png` (1440×1000), `/tmp/cinematic-intro.png` (1440×1000), `/tmp/cinematic-mobile.png` (390 CSS px full page). Final mobile reveal review: `/tmp/cinematic-mobile-reviewed.png`. Device scale factor 1. The current source is the existing site plus the user's explicit revision brief; layout changes are intentional, not fidelity defects against the prior mock.
+
+- Typography: Inter retained, solid red/ivory hierarchy. Hard-cut intro and staggered headline motion replace photo movement. Section headings reveal once on entry.
+- Layout: hero copy and static portrait occupy separate grid columns; mobile stacks them. Work moves immediately after hero. Project panels precede biography and commercial capabilities.
+- Imagery: existing close-up portrait stays inside a defined editorial frame with caption. No transforms, animation or pointer listeners affect it. Verified identical bounding boxes before and after mouse movement and elapsed time.
+- Palette: near-black, scarlet, ivory; project surfaces use restrained dark hues. No invented project photography, artwork or screenshots.
+- Content: studio positioning, website links, service choices and inquiry path preserved. No invented awards or client outcomes.
+
+Iteration: first intro code made delayed words visible before their start due to backwards fill. Set the first two words to zero base opacity with no fill, and only the final word to forwards fill. Captured intro shows a single clean THINK frame. No P0/P1/P2 findings remain for implemented scope.
+
+Browser checks passed: intro skip, automatic completion, reduced-motion bypass, text-motion pause, immobile portrait, no-JS content access, every scroll heading becomes visible, 390/768/1440 no overflow, mobile navigation, service preselection, inquiry generation and copy action. No browser errors. External project screenshots/videos remain blocked by network policy, as already documented.

@@ -20,6 +20,10 @@ The inquiry form prepares an introduction for the visitor to copy and send on Li
 
 Fjall Group / Chief Business Officer comes from the user; SECHA and LingoTalk descriptions come from the previous portfolio. No dates or additional roles have been invented. Update the experience rows when new verified details are available. The hero portrait is an edited asset based on the supplied photo. Inter is self-hosted under the SIL Open Font License (see `assets/Inter-LICENSE.txt`). The single arrow is from Tabler Icons (MIT).
 
-## Hero motion and introduction
+## Cinematic studio presentation
 
-The opening film is a local three-second MP4 animated from the portrait. It plays once per tab session, can be skipped (button or Escape), and never holds the page longer than four seconds. Reduced-motion users bypass it. The continuous portrait motion can be paused independently; all content is available without JavaScript.
+The studio offer and selected work lead the page. A fixed editorial headshot introduces the principal. Motion is restricted to typography; the headshot has no animation, pointer parallax, zoom or transform.
+
+The opening sequence uses three hard-cut typographic frames: THINK / BUILD / JOPELO. It runs once per tab session, ends after 2.8 seconds, and supports Skip and Escape. Reduced-motion users bypass it. The motion control disables text animation. Content stays available without JavaScript.
+
+Project panels link to Fjall Group and SECHA. Screenshots and video previews require access to the project websites or supplied media; no preview imagery has been fabricated.
