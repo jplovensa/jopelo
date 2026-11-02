@@ -43,3 +43,13 @@ Chromium: mobile menu opens and closes after navigation; service selection prese
 ## Experience and work follow-up
 
 User supplied Fjall Group and SECHA website URLs and requested expanded copy. Added linked text-based project rows and edited experience/principal copy without inventing dates, numeric results, or additional credentials. New section evidence: `/tmp/jopelo-work.png` (1440 CSS px desktop). Its editorial rows extend the existing divider/type system; no source mock existed for this additional section. Browser validation repeated: service selection, contact introduction/copy action, mobile menu, zero page errors, no overflow at 390/768/1440. Verified both project anchor destinations. External site capture is blocked by HTTP proxy 403; video previews remain unimplemented. Earlier chat history is not available through the enabled tools. These content/access limitations are distinct from passing checks of the implemented site.
+
+## Close-up hero and opening film
+
+User-requested scoped revision: close-up headshot, subtle motion and an opening video preloader. New evidence: `/tmp/jopelo-closeup.png` (1487×1058), `/tmp/jopelo-closeup-mobile.png` (390×844), `/tmp/jopelo-intro.png` (1487×1058). Portrait now uses a face-led crop rather than the earlier torso composition; Inter, palette, content and supporting layout remain. The local MP4 is a three-second animated portrait treatment, not newly filmed footage (140,157 bytes).
+
+Initial mobile review found the global image max-width prevented centering the wider portrait. Set `.hero .portrait { max-width: none; }` and recaptured; face is now centered. Motion toggle pauses only continuous portrait animation; entrance text remains readable. Intro supports Skip, Escape, automatic completion, autoplay error dismissal and a four-second hard limit. It runs once per tab session and is bypassed for reduced motion. No-JS leaves the intro hidden and the portfolio readable.
+
+Chromium verified actual MP4 playback (three-second duration, advancing currentTime), skip, automatic completion, per-session suppression, portrait pause, reduced-motion bypass and no horizontal overflow on mobile. Repeated existing menu/service/inquiry tests: passed, zero browser errors. Final mobile crop and desktop screenshot opened and inspected. No outstanding P0/P1/P2 issue in this scoped revision.
+
+final result: passed
