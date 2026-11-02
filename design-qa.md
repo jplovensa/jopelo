@@ -113,3 +113,15 @@ Evidence opened: `/tmp/streaming-hero.png` (1440×1000), `/tmp/streaming-mobile.
 - Content: studio headline, metadata, project links, credentials and inquiry content checked. Duplicate portrait removed from the principal section to keep the identity hero as the visual anchor.
 
 Browser checks: no horizontal overflow at 390/768/1440, menu, intro skip/replay/Escape, videos advancing (5s duration, no media errors), motion/video pause, service preselection, generated inquiry, reduced-motion intro bypass/video pause; no browser errors or failed local assets. Each scroll heading verified visible after reveal. Portrait bounding box unchanged over time. Syntax and diff checks passed. No unresolved P0/P1/P2 findings in scope. Live website deployment has not been independently verified.
+
+## Precisely framed cinematic close-up (current)
+
+final result: passed
+
+The user requested a centered cinematic close-up, moving JOPELO lettering behind it, and restoration of the red opening. Evidence inspected: `/tmp/streaming-hero.png` (1440×1000), `/tmp/streaming-mobile.png` (390 CSS px full document), `/tmp/closeup-tablet.png` (768×1000, paused motion). Previous ID-card hero is intentionally replaced; lower-page ivory/charcoal styling and project/capability content remain.
+
+Portrait treatment now uses the original 1024×1536 proportions rather than object-fit cover. Desktop width 920px/top -25px; tablet width 780px/top 0; mobile width 600px/top -8px; large desktop width 1080px/top -28px. The overflow frame crops the lower torso, leaving the head, eyes and face centered with deliberate headroom. No image motion, zoom or parallax. Typography moves independently behind the subject. Barcode remains in a supporting credit panel.
+
+Chromium measurements at widths 390/768/1440/1920 verified portrait center within 0.5 CSS px of viewport center. Portrait bounding box unchanged over a one-second interval at every size. Background type transform changes while running and animationPlayState is paused after the motion control. Screenshots visually reviewed for headroom, chin/neck crop and side-text overlap; face remains unobscured. No actionable P0/P1/P2 findings.
+
+Existing regression checks pass: no overflow at 390/768/1440, mobile navigation, local project video playback, motion pause, capability selection and inquiry generation, preloader skip/replay/Escape, reduced-motion bypass and no video autoplay under reduced motion. No page errors or failed local responses. The red THINK / BUILD / JOPELO opening retains a 2.8-second limit and per-session storage with replay. Live deployment unverified.
