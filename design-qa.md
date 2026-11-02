@@ -39,3 +39,7 @@ Chromium: mobile menu opens and closes after navigation; service selection prese
 - [x] Local fonts, portrait and arrow with font/icon licenses.
 - [x] Desktop/mobile functional and visual checks.
 - [ ] Add project URLs and preview videos once supplied by the user.
+
+## Experience and work follow-up
+
+User supplied Fjall Group and SECHA website URLs and requested expanded copy. Added linked text-based project rows and edited experience/principal copy without inventing dates, numeric results, or additional credentials. New section evidence: `/tmp/jopelo-work.png` (1440 CSS px desktop). Its editorial rows extend the existing divider/type system; no source mock existed for this additional section. Browser validation repeated: service selection, contact introduction/copy action, mobile menu, zero page errors, no overflow at 390/768/1440. Verified both project anchor destinations. External site capture is blocked by HTTP proxy 403; video previews remain unimplemented. Earlier chat history is not available through the enabled tools. These content/access limitations are distinct from passing checks of the implemented site.
