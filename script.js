@@ -11,39 +11,21 @@ form.addEventListener('submit', event => {event.preventDefault();const name = fo
 document.querySelector('#copy').addEventListener('click', async () => {const message = document.querySelector('#message');try {await navigator.clipboard.writeText(message.value);document.querySelector('#copy-status').textContent = 'Copied. Paste your introduction into a LinkedIn message.';}catch {message.focus();message.select();document.querySelector('#copy-status').textContent = 'Select and copy the introduction, then paste it into LinkedIn.';}});
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-// Typography-only opening sequence; the portrait is always still.
+// Studio ident: typography moves; the portrait remains still.
 const intro = document.querySelector('#intro');
 const skipIntro = document.querySelector('#skip-intro');
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 const motionButton = document.querySelector('.motion-toggle');
+const films = [...document.querySelectorAll('.project-video')];
 let introTimer;
-let countTimer;
-function dismissIntro() {
-  clearTimeout(introTimer);
-  clearInterval(countTimer);
-  const restoreFocus = intro.contains(document.activeElement);
-  intro.hidden = true;
-  document.body.classList.remove('intro-playing');
-  if (restoreFocus) document.querySelector('.brand').focus({preventScroll:true});
-  try {sessionStorage.setItem('jopelo-cinematic-seen','1');} catch {}
-}
-let seenIntro = false;
-try {seenIntro = sessionStorage.getItem('jopelo-cinematic-seen') === '1';} catch {}
-if (!motionPreference.matches && !seenIntro) {
-  intro.hidden = false;
-  document.body.classList.add('intro-playing');
-  skipIntro.focus({preventScroll:true});
-  let count = 1;
-  countTimer = setInterval(() => {count = Math.min(3,count+1);document.querySelector('#intro-count').textContent = `00${count} / 003`;},850);
-  introTimer = setTimeout(dismissIntro,2800);
-}
+function dismissIntro(){clearTimeout(introTimer);const restore=intro.contains(document.activeElement);intro.hidden=true;document.body.classList.remove('intro-playing');if(restore)document.querySelector('.brand').focus({preventScroll:true});try{sessionStorage.setItem('jopelo-studio-seen','1');}catch{}}
+function playOpening(){if(motionPreference.matches)return;clearTimeout(introTimer);intro.hidden=false;intro.classList.remove('playing');void intro.offsetWidth;intro.classList.add('playing');document.body.classList.add('intro-playing');skipIntro.focus({preventScroll:true});introTimer=setTimeout(dismissIntro,3600);}
+let seen=false;try{seen=sessionStorage.getItem('jopelo-studio-seen')==='1';}catch{}
+if(!seen)playOpening();
 skipIntro.addEventListener('click',dismissIntro);
-intro.addEventListener('keydown',event => {if(event.key === 'Escape') dismissIntro();if(event.key === 'Tab'){event.preventDefault();skipIntro.focus();}});
-motionButton.addEventListener('click',() => {
-  const paused = document.body.classList.toggle('motion-paused');
-  motionButton.setAttribute('aria-pressed',String(paused));
-  motionButton.textContent = paused ? 'Resume text motion' : 'Pause text motion';
-});
-const revealObserver = new IntersectionObserver(entries => {entries.forEach(entry => {if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}});},{threshold:.12});
-if (!motionPreference.matches) document.querySelectorAll('.section-heading h2,.principal h2,.contact h2').forEach(el => {el.classList.add('text-reveal');revealObserver.observe(el);});
-motionPreference.addEventListener('change',() => {if(motionPreference.matches){dismissIntro();document.querySelectorAll('.text-reveal').forEach(el=>el.classList.add('is-visible'));}});
+document.querySelector('.replay-opening').addEventListener('click',playOpening);
+intro.addEventListener('keydown',e=>{if(e.key==='Escape')dismissIntro();if(e.key==='Tab'){e.preventDefault();skipIntro.focus();}});
+function setFilmMotion(paused){films.forEach(v=>{if(paused){v.pause();v.removeAttribute('autoplay');}else{v.play().catch(()=>{});}});}
+motionButton.addEventListener('click',()=>{const paused=document.body.classList.toggle('motion-paused');motionButton.setAttribute('aria-pressed',String(paused));motionButton.textContent=paused?'Resume motion':'Pause motion';setFilmMotion(paused||motionPreference.matches);});
+setFilmMotion(motionPreference.matches);
+motionPreference.addEventListener('change',()=>{if(motionPreference.matches)dismissIntro();setFilmMotion(motionPreference.matches||document.body.classList.contains('motion-paused'));});

@@ -71,3 +71,15 @@ Evidence opened: `/tmp/cinematic-desktop.png` (1440×1000), `/tmp/cinematic-intr
 Iteration: first intro code made delayed words visible before their start due to backwards fill. Set the first two words to zero base opacity with no fill, and only the final word to forwards fill. Captured intro shows a single clean THINK frame. No P0/P1/P2 findings remain for implemented scope.
 
 Browser checks passed: intro skip, automatic completion, reduced-motion bypass, text-motion pause, immobile portrait, no-JS content access, every scroll heading becomes visible, 390/768/1440 no overflow, mobile navigation, service preselection, inquiry generation and copy action. No browser errors. External project screenshots/videos remain blocked by network policy, as already documented.
+
+## Streaming-style opening, embedded title sequences and capabilities (current)
+
+final result: passed
+
+The user's revision intentionally changes the previous split hero to a full-width JOPELO studio ident. It uses original JOPELO typography; this is a cinematic red-wordmark treatment, not an exact reproduction of Netflix's proprietary opening. The portrait remains still in the principal section.
+
+Evidence inspected: `/tmp/studio-ident.png` (1440×1000, active opening), `/tmp/streaming-hero.png` (1440×1000, settled hero), `/tmp/streaming-work.png` (1440 CSS px, work section), and `/tmp/streaming-mobile.png` (390 CSS px, full page). CSS and screenshot pixels are 1:1. Desktop wordmark and hero-copy positions were inspected at full resolution. First inspection found the eyebrow overlapping the large ident; increased desktop hero top padding to 410px and minimum height to 920px, recaptured and verified separation.
+
+Typography: Inter throughout, wordmark focus/zoom and text entrances. Spacing: full-width studio title, work immediately below, still principal portrait separated from hero, editorial capability rows. Tokens: near-black, red and ivory, restrained project surface hues. Assets: two local five-second MP4s and JPEG posters, genuine motion title sequences clearly labelled as studio title treatments, not website recordings. Content: Forbes India and APAC Insider recognition names supplied directly by the user. No unverified award dates, categories or titles added; LinkedIn fetching is blocked. Antler and UNHCR kept under background. Fixed-price packages replaced by strategy/storytelling, web experiences, brand worlds and venture/real-estate advisory, all linked to matching inquiry choices.
+
+Chromium validation: both videos advance currentTime and report duration=5 with no media errors; pause control pauses both; intro skip and replay/Escape work; revised capability selection correctly populates service and inquiry; mobile menu works; no overflow at 390/768/1440; reduced motion bypasses opening and prevents video autoplay; no page errors or HTTP failures for local assets. No actionable P0/P1/P2 finding remains in implemented scope. Website footage and independent LinkedIn credential verification remain access-limited.
