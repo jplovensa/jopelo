@@ -20,10 +20,12 @@ The inquiry form prepares an introduction for the visitor to copy and send on Li
 
 Fjall Group / Chief Business Officer comes from the user; SECHA and LingoTalk descriptions come from the previous portfolio. No dates or additional roles have been invented. Update the experience rows when new verified details are available. The hero portrait is an edited asset based on the supplied photo. Inter is self-hosted under the SIL Open Font License (see `assets/Inter-LICENSE.txt`). The single arrow is from Tabler Icons (MIT).
 
-## Cinematic studio presentation
+## Identity-inspired studio design
 
-The hero follows the supplied portrait-led reference: oversized red PORTFOLIO background type, a centered still portrait, left introduction and right recognition. Inter remains throughout. The previous red THINK / BUILD / JOPELO preloader is restored, with skip, Escape, replay, a 2.8-second limit and reduced-motion bypass. Recognition names Forbes India and APAC Insider were supplied by the user; award titles, dates, and categories have not been independently verified because LinkedIn access is blocked.
+The entire page uses warm ivory, charcoal, fine rules and oversized Inter. The hero adapts the supplied identification-card reference for JOPELO, including a split grayscale/color headshot and a valid Code 128 barcode encoding `JOPELO-001`. The barcode is a studio identifier, not a ticket, authentication credential or contact link. It was generated with ReportLab; no new runtime dependency is required.
 
-The Fjall Group and SECHA panels contain self-hosted, five-second MP4 studio title sequences, with posters, native controls and links to the real websites. These are custom title treatments, not recordings of the project websites. Reduced-motion preference disables autoplay, and the motion button pauses both text and videos. No external video service is required.
+The THINK / BUILD / JOPELO preloader now uses the same ivory-and-black palette. Text enters in the hero and reveals once in section headings. The portrait is still. Skip, Escape, replay, reduced-motion bypass and global motion pause are supported.
 
-Capabilities are organised as Strategy & storytelling, Web experiences, Brand worlds, and Ventures & real estate. Each links into a preselected inquiry. There are no fixed package prices.
+Fjall Group and SECHA remain portfolio projects. Their locally hosted title sequences, native controls and website links are retained. They are custom title treatments, not recordings of the websites. Forbes India and APAC Insider recognition names were supplied by the user; award titles and dates have not been independently verified.
+
+Capabilities and contact follow the same editorial identity. The inquiry prepares text for the visitor to send on LinkedIn; no submission backend is implied.

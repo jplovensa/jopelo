@@ -30,3 +30,11 @@ function setFilmMotion(paused){films.forEach(v=>{if(paused){v.pause();v.removeAt
 motionButton.addEventListener('click',()=>{const paused=document.body.classList.toggle('motion-paused');motionButton.setAttribute('aria-pressed',String(paused));motionButton.textContent=paused?'Resume motion':'Pause motion';setFilmMotion(paused||motionPreference.matches);});
 setFilmMotion(motionPreference.matches);
 motionPreference.addEventListener('change',()=>{if(motionPreference.matches)dismissIntro();setFilmMotion(motionPreference.matches||document.body.classList.contains('motion-paused'));});
+// Section typography enters once; photography and barcode remain still.
+if (!motionPreference.matches && 'IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}
+  }),{threshold:.1});
+  document.querySelectorAll('.section-heading h2,.principal h2,.contact h2').forEach(heading => {heading.classList.add('text-reveal');revealObserver.observe(heading);});
+  motionPreference.addEventListener('change',()=>{if(motionPreference.matches)document.querySelectorAll('.text-reveal').forEach(el=>el.classList.add('is-visible'));});
+}
