@@ -22,7 +22,7 @@ Fjall Group / Chief Business Officer comes from the user; SECHA and LingoTalk de
 
 ## Cinematic studio presentation
 
-The hero and skippable intro use a red JOPELO wordmark with a cinematic focus-and-zoom treatment. Replay is available from the hero. The portrait is still and appears in the principal section. Recognition names Forbes India and APAC Insider were supplied by the user; award titles, dates, and categories have not been independently verified because LinkedIn access is blocked.
+The hero follows the supplied portrait-led reference: oversized red PORTFOLIO background type, a centered still portrait, left introduction and right recognition. Inter remains throughout. The previous red THINK / BUILD / JOPELO preloader is restored, with skip, Escape, replay, a 2.8-second limit and reduced-motion bypass. Recognition names Forbes India and APAC Insider were supplied by the user; award titles, dates, and categories have not been independently verified because LinkedIn access is blocked.
 
 The Fjall Group and SECHA panels contain self-hosted, five-second MP4 studio title sequences, with posters, native controls and links to the real websites. These are custom title treatments, not recordings of the project websites. Reduced-motion preference disables autoplay, and the motion button pauses both text and videos. No external video service is required.
 

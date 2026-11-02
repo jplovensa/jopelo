@@ -83,3 +83,17 @@ Evidence inspected: `/tmp/studio-ident.png` (1440×1000, active opening), `/tmp/
 Typography: Inter throughout, wordmark focus/zoom and text entrances. Spacing: full-width studio title, work immediately below, still principal portrait separated from hero, editorial capability rows. Tokens: near-black, red and ivory, restrained project surface hues. Assets: two local five-second MP4s and JPEG posters, genuine motion title sequences clearly labelled as studio title treatments, not website recordings. Content: Forbes India and APAC Insider recognition names supplied directly by the user. No unverified award dates, categories or titles added; LinkedIn fetching is blocked. Antler and UNHCR kept under background. Fixed-price packages replaced by strategy/storytelling, web experiences, brand worlds and venture/real-estate advisory, all linked to matching inquiry choices.
 
 Chromium validation: both videos advance currentTime and report duration=5 with no media errors; pause control pauses both; intro skip and replay/Escape work; revised capability selection correctly populates service and inquiry; mobile menu works; no overflow at 390/768/1440; reduced motion bypasses opening and prevents video autoplay; no page errors or HTTP failures for local assets. No actionable P0/P1/P2 finding remains in implemented scope. Website footage and independent LinkedIn credential verification remain access-limited.
+
+## Reference portrait hero and restored brutalist opening (current)
+
+final result: passed
+
+Source: latest user-attached Renando hero screenshot (wide desktop reference). Intentional adaptations retain Inter, the user's jet-black-haired portrait, JOPELO copy and confirmed recognition instead of the reference's condensed font, male portrait and unverified numerical claims.
+
+Evidence inspected: `/tmp/streaming-hero.png` (1440×1000 desktop, settled hero), `/tmp/streaming-mobile.png` (390 CSS px full document), `/tmp/studio-ident.png` (1440×1000 restored red opening, BUILD frame). CSS pixels and image pixels are 1:1.
+
+Composition now follows the screenshot: oversized tall red PORTFOLIO backdrop, centered static portrait, left studio introduction and CTA, right recognition, bottom discovery strip. The previous red THINK / BUILD / JOPELO preloader is restored with a three-step counter, 2.8-second completion, Skip/Escape/replay and session suppression. Project films and capability content are preserved.
+
+Visual iteration: initial enlarged red lettering reduced right-column contrast. Faded the lower background text and switched credential names to ivory, then recaptured and inspected the desktop hero. Body copy and CTA remain unobscured; mobile stacks the face-led portrait, introduction and recognition. The original script smoke test initially targeted the old replay accessible name; updated it to the new visible label and repeated checks.
+
+Final Chromium checks passed: opening skip/replay/Escape; native project video playback (duration=5, advancing time, no errors); pause control; capabilities/inquiry selection and generation; mobile menu; no overflow at 390/768/1440; reduced-motion opening bypass and video pause; zero browser page errors or failed local asset responses. Syntax and diff whitespace checks passed. No remaining P0/P1/P2 findings in scope.

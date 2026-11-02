@@ -18,9 +18,10 @@ const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 const motionButton = document.querySelector('.motion-toggle');
 const films = [...document.querySelectorAll('.project-video')];
 let introTimer;
-function dismissIntro(){clearTimeout(introTimer);const restore=intro.contains(document.activeElement);intro.hidden=true;document.body.classList.remove('intro-playing');if(restore)document.querySelector('.brand').focus({preventScroll:true});try{sessionStorage.setItem('jopelo-studio-seen','1');}catch{}}
-function playOpening(){if(motionPreference.matches)return;clearTimeout(introTimer);intro.hidden=false;intro.classList.remove('playing');void intro.offsetWidth;intro.classList.add('playing');document.body.classList.add('intro-playing');skipIntro.focus({preventScroll:true});introTimer=setTimeout(dismissIntro,3600);}
-let seen=false;try{seen=sessionStorage.getItem('jopelo-studio-seen')==='1';}catch{}
+let countTimer;
+function dismissIntro(){clearTimeout(introTimer);clearInterval(countTimer);const restore=intro.contains(document.activeElement);intro.hidden=true;document.body.classList.remove('intro-playing');if(restore)document.querySelector('.brand').focus({preventScroll:true});try{sessionStorage.setItem('jopelo-reference-seen','1');}catch{}}
+function playOpening(){if(motionPreference.matches)return;clearTimeout(introTimer);clearInterval(countTimer);intro.hidden=false;intro.classList.remove('playing');void intro.offsetWidth;intro.classList.add('playing');document.body.classList.add('intro-playing');skipIntro.focus({preventScroll:true});let count=1;document.querySelector("#intro-count").textContent="001 / 003";countTimer=setInterval(()=>{count=Math.min(3,count+1);document.querySelector("#intro-count").textContent=`00${count} / 003`;},850);introTimer=setTimeout(dismissIntro,2800);}
+let seen=false;try{seen=sessionStorage.getItem('jopelo-reference-seen')==='1';}catch{}
 if(!seen)playOpening();
 skipIntro.addEventListener('click',dismissIntro);
 document.querySelector('.replay-opening').addEventListener('click',playOpening);
